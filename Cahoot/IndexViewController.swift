@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Alamofire
+
 class IndexViewController: UIViewController {
     
     @IBOutlet weak var EmailField: UITextField!
@@ -28,6 +30,26 @@ class IndexViewController: UIViewController {
         // Set up Appearance
         self.setUpAppearance()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["key": "value"])
+            .responseJSON { request, response, result in
+                switch result {
+                // success
+                case .Success(let JSON):
+                    print("Success with JSON: \(JSON)")
+                    let jsonData =  JSON as! NSDictionary
+                    print(jsonData["args"]!)
+                // fail
+                case .Failure(let data, let error):
+                    print("Request failed with error: \(error)")
+                    if let data = data {
+                        print("Response data: \(NSString(data: data, encoding: NSUTF8StringEncoding)!)")
+                    }
+                }
+        }
     }
     
     func setUpAppearance(){
