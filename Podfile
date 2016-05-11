@@ -7,7 +7,8 @@ target 'Cahoot' do
   use_frameworks!
 
   # Pods for Cahoot
-pod 'Alamofire', '~> 2.0'
+  pod 'Alamofire', '~> 2.0'
+  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
   target 'CahootTests' do
     inherit! :search_paths
