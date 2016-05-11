@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		953824A71CE2EF50006AB773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953824A61CE2EF50006AB773 /* AppDelegate.swift */; };
-		953824A91CE2EF50006AB773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953824A81CE2EF50006AB773 /* ViewController.swift */; };
+		953824A91CE2EF50006AB773 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953824A81CE2EF50006AB773 /* IndexViewController.swift */; };
 		953824AC1CE2EF50006AB773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953824AA1CE2EF50006AB773 /* Main.storyboard */; };
 		953824AF1CE2EF50006AB773 /* Cahoot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 953824AD1CE2EF50006AB773 /* Cahoot.xcdatamodeld */; };
 		953824B11CE2EF50006AB773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953824B01CE2EF50006AB773 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		953824A31CE2EF50006AB773 /* Cahoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cahoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953824A61CE2EF50006AB773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		953824A81CE2EF50006AB773 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		953824A81CE2EF50006AB773 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		953824AB1CE2EF50006AB773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		953824AE1CE2EF50006AB773 /* Cahoot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cahoot.xcdatamodel; sourceTree = "<group>"; };
 		953824B01CE2EF50006AB773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				953824A61CE2EF50006AB773 /* AppDelegate.swift */,
-				953824A81CE2EF50006AB773 /* ViewController.swift */,
+				953824A81CE2EF50006AB773 /* IndexViewController.swift */,
 				953824AA1CE2EF50006AB773 /* Main.storyboard */,
 				953824B01CE2EF50006AB773 /* Assets.xcassets */,
 				953824B21CE2EF50006AB773 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953824A91CE2EF50006AB773 /* ViewController.swift in Sources */,
+				953824A91CE2EF50006AB773 /* IndexViewController.swift in Sources */,
 				953824A71CE2EF50006AB773 /* AppDelegate.swift in Sources */,
 				953824AF1CE2EF50006AB773 /* Cahoot.xcdatamodeld in Sources */,
 			);
