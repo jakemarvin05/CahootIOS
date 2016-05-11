@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		953824A71CE2EF50006AB773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953824A61CE2EF50006AB773 /* AppDelegate.swift */; };
+		953824A91CE2EF50006AB773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953824A81CE2EF50006AB773 /* ViewController.swift */; };
+		953824AC1CE2EF50006AB773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953824AA1CE2EF50006AB773 /* Main.storyboard */; };
+		953824AF1CE2EF50006AB773 /* Cahoot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 953824AD1CE2EF50006AB773 /* Cahoot.xcdatamodeld */; };
+		953824B11CE2EF50006AB773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953824B01CE2EF50006AB773 /* Assets.xcassets */; };
+		953824B41CE2EF50006AB773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953824B21CE2EF50006AB773 /* LaunchScreen.storyboard */; };
+		953824BF1CE2EF51006AB773 /* CahootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953824BE1CE2EF51006AB773 /* CahootTests.swift */; };
+		953824CA1CE2EF51006AB773 /* CahootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953824C91CE2EF51006AB773 /* CahootUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		953824BB1CE2EF51006AB773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9538249B1CE2EF50006AB773 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953824A21CE2EF50006AB773;
+			remoteInfo = Cahoot;
+		};
+		953824C61CE2EF51006AB773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9538249B1CE2EF50006AB773 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953824A21CE2EF50006AB773;
+			remoteInfo = Cahoot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		953824A31CE2EF50006AB773 /* Cahoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cahoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		953824A61CE2EF50006AB773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		953824A81CE2EF50006AB773 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		953824AB1CE2EF50006AB773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		953824AE1CE2EF50006AB773 /* Cahoot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cahoot.xcdatamodel; sourceTree = "<group>"; };
+		953824B01CE2EF50006AB773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		953824B31CE2EF50006AB773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		953824B51CE2EF50006AB773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953824BA1CE2EF51006AB773 /* CahootTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CahootTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953824BE1CE2EF51006AB773 /* CahootTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CahootTests.swift; sourceTree = "<group>"; };
+		953824C01CE2EF51006AB773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953824C51CE2EF51006AB773 /* CahootUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CahootUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953824C91CE2EF51006AB773 /* CahootUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CahootUITests.swift; sourceTree = "<group>"; };
+		953824CB1CE2EF51006AB773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		953824A01CE2EF50006AB773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953824B71CE2EF51006AB773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953824C21CE2EF51006AB773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9538249A1CE2EF50006AB773 = {
+			isa = PBXGroup;
+			children = (
+				953824A51CE2EF50006AB773 /* Cahoot */,
+				953824BD1CE2EF51006AB773 /* CahootTests */,
+				953824C81CE2EF51006AB773 /* CahootUITests */,
+				953824A41CE2EF50006AB773 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		953824A41CE2EF50006AB773 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				953824A31CE2EF50006AB773 /* Cahoot.app */,
+				953824BA1CE2EF51006AB773 /* CahootTests.xctest */,
+				953824C51CE2EF51006AB773 /* CahootUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		953824A51CE2EF50006AB773 /* Cahoot */ = {
+			isa = PBXGroup;
+			children = (
+				953824A61CE2EF50006AB773 /* AppDelegate.swift */,
+				953824A81CE2EF50006AB773 /* ViewController.swift */,
+				953824AA1CE2EF50006AB773 /* Main.storyboard */,
+				953824B01CE2EF50006AB773 /* Assets.xcassets */,
+				953824B21CE2EF50006AB773 /* LaunchScreen.storyboard */,
+				953824B51CE2EF50006AB773 /* Info.plist */,
+				953824AD1CE2EF50006AB773 /* Cahoot.xcdatamodeld */,
+			);
+			path = Cahoot;
+			sourceTree = "<group>";
+		};
+		953824BD1CE2EF51006AB773 /* CahootTests */ = {
+			isa = PBXGroup;
+			children = (
+				953824BE1CE2EF51006AB773 /* CahootTests.swift */,
+				953824C01CE2EF51006AB773 /* Info.plist */,
+			);
+			path = CahootTests;
+			sourceTree = "<group>";
+		};
+		953824C81CE2EF51006AB773 /* CahootUITests */ = {
+			isa = PBXGroup;
+			children = (
+				953824C91CE2EF51006AB773 /* CahootUITests.swift */,
+				953824CB1CE2EF51006AB773 /* Info.plist */,
+			);
+			path = CahootUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		953824A21CE2EF50006AB773 /* Cahoot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953824CE1CE2EF51006AB773 /* Build configuration list for PBXNativeTarget "Cahoot" */;
+			buildPhases = (
+				9538249F1CE2EF50006AB773 /* Sources */,
+				953824A01CE2EF50006AB773 /* Frameworks */,
+				953824A11CE2EF50006AB773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cahoot;
+			productName = Cahoot;
+			productReference = 953824A31CE2EF50006AB773 /* Cahoot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		953824B91CE2EF51006AB773 /* CahootTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953824D11CE2EF51006AB773 /* Build configuration list for PBXNativeTarget "CahootTests" */;
+			buildPhases = (
+				953824B61CE2EF51006AB773 /* Sources */,
+				953824B71CE2EF51006AB773 /* Frameworks */,
+				953824B81CE2EF51006AB773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953824BC1CE2EF51006AB773 /* PBXTargetDependency */,
+			);
+			name = CahootTests;
+			productName = CahootTests;
+			productReference = 953824BA1CE2EF51006AB773 /* CahootTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		953824C41CE2EF51006AB773 /* CahootUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953824D41CE2EF51006AB773 /* Build configuration list for PBXNativeTarget "CahootUITests" */;
+			buildPhases = (
+				953824C11CE2EF51006AB773 /* Sources */,
+				953824C21CE2EF51006AB773 /* Frameworks */,
+				953824C31CE2EF51006AB773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953824C71CE2EF51006AB773 /* PBXTargetDependency */,
+			);
+			name = CahootUITests;
+			productName = CahootUITests;
+			productReference = 953824C51CE2EF51006AB773 /* CahootUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9538249B1CE2EF50006AB773 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Cahoot;
+				TargetAttributes = {
+					953824A21CE2EF50006AB773 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					953824B91CE2EF51006AB773 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 953824A21CE2EF50006AB773;
+					};
+					953824C41CE2EF51006AB773 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 953824A21CE2EF50006AB773;
+					};
+				};
+			};
+			buildConfigurationList = 9538249E1CE2EF50006AB773 /* Build configuration list for PBXProject "Cahoot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9538249A1CE2EF50006AB773;
+			productRefGroup = 953824A41CE2EF50006AB773 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				953824A21CE2EF50006AB773 /* Cahoot */,
+				953824B91CE2EF51006AB773 /* CahootTests */,
+				953824C41CE2EF51006AB773 /* CahootUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		953824A11CE2EF50006AB773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953824B41CE2EF50006AB773 /* LaunchScreen.storyboard in Resources */,
+				953824B11CE2EF50006AB773 /* Assets.xcassets in Resources */,
+				953824AC1CE2EF50006AB773 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953824B81CE2EF51006AB773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953824C31CE2EF51006AB773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9538249F1CE2EF50006AB773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953824A91CE2EF50006AB773 /* ViewController.swift in Sources */,
+				953824A71CE2EF50006AB773 /* AppDelegate.swift in Sources */,
+				953824AF1CE2EF50006AB773 /* Cahoot.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953824B61CE2EF51006AB773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953824BF1CE2EF51006AB773 /* CahootTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953824C11CE2EF51006AB773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953824CA1CE2EF51006AB773 /* CahootUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		953824BC1CE2EF51006AB773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953824A21CE2EF50006AB773 /* Cahoot */;
+			targetProxy = 953824BB1CE2EF51006AB773 /* PBXContainerItemProxy */;
+		};
+		953824C71CE2EF51006AB773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953824A21CE2EF50006AB773 /* Cahoot */;
+			targetProxy = 953824C61CE2EF51006AB773 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		953824AA1CE2EF50006AB773 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953824AB1CE2EF50006AB773 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		953824B21CE2EF50006AB773 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953824B31CE2EF50006AB773 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		953824CC1CE2EF51006AB773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		953824CD1CE2EF51006AB773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		953824CF1CE2EF51006AB773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cahoot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot.Cahoot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		953824D01CE2EF51006AB773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cahoot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot.Cahoot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		953824D21CE2EF51006AB773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CahootTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot.CahootTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cahoot.app/Cahoot";
+			};
+			name = Debug;
+		};
+		953824D31CE2EF51006AB773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CahootTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot.CahootTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cahoot.app/Cahoot";
+			};
+			name = Release;
+		};
+		953824D51CE2EF51006AB773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CahootUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot.CahootUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cahoot;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		953824D61CE2EF51006AB773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CahootUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot.CahootUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cahoot;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9538249E1CE2EF50006AB773 /* Build configuration list for PBXProject "Cahoot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953824CC1CE2EF51006AB773 /* Debug */,
+				953824CD1CE2EF51006AB773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953824CE1CE2EF51006AB773 /* Build configuration list for PBXNativeTarget "Cahoot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953824CF1CE2EF51006AB773 /* Debug */,
+				953824D01CE2EF51006AB773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		953824D11CE2EF51006AB773 /* Build configuration list for PBXNativeTarget "CahootTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953824D21CE2EF51006AB773 /* Debug */,
+				953824D31CE2EF51006AB773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		953824D41CE2EF51006AB773 /* Build configuration list for PBXNativeTarget "CahootUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953824D51CE2EF51006AB773 /* Debug */,
+				953824D61CE2EF51006AB773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		953824AD1CE2EF50006AB773 /* Cahoot.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				953824AE1CE2EF50006AB773 /* Cahoot.xcdatamodel */,
+			);
+			currentVersion = 953824AE1CE2EF50006AB773 /* Cahoot.xcdatamodel */;
+			path = Cahoot.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9538249B1CE2EF50006AB773 /* Project object */;
+}
