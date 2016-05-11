@@ -13,6 +13,14 @@ class IndexViewController: UIViewController {
     @IBOutlet weak var EmailField: UITextField!
     
     @IBOutlet weak var PasswordField: UITextField!
+    
+    @IBOutlet weak var ForgotPasswordButton: UIButton!
+    
+    @IBOutlet weak var LoginButton: UIButton!
+    
+    @IBOutlet weak var LoginWithFBButton: UIButton!
+    
+    @IBOutlet weak var SignUpButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +31,7 @@ class IndexViewController: UIViewController {
     }
     
     func setUpAppearance(){
+        /// Make Padding for the textFields
         // create padding views
         let emailFieldPaddingView = UIView(frame: CGRectMake(0, 0, 10, self.EmailField.frame.height))
         let passwordFieldPaddingView =  UIView(frame: CGRectMake(0, 0, 10, self.EmailField.frame.height))
@@ -32,6 +41,16 @@ class IndexViewController: UIViewController {
         // setup the leftViewMode of the textfields
         self.PasswordField.leftViewMode = UITextFieldViewMode.Always
         self.EmailField.leftViewMode = UITextFieldViewMode.Always
+        
+        /// Fix the buttons appearance
+        // put border to the LoginButton
+        self.LoginButton.layer.borderWidth = 1
+        self.LoginButton.layer.borderColor = UIColor.blackColor().CGColor
+        
+        // put border to the SignUpButton
+        self.SignUpButton.layer.borderWidth = 1
+        self.SignUpButton.layer.borderColor = UIColor.blackColor().CGColor
+       
         
     }
 
