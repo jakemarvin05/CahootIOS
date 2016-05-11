@@ -34,17 +34,25 @@ class IndexViewController: UIViewController {
         
     }
     
+    func commonLoginFunctions(){
+        // This is the function executed when the user is successfully authenticated
+        
+    }
+    
     override func viewWillAppear(animated: Bool) {
         
+        // Sample Implementation of Alamofire and SwiftyJSON
         Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["key": "value"])
             .responseJSON { request, response, result in
                 switch result {
                 // success
                 case .Success(let JSONData):
-                    
-                  //  print("Success with JSON: \(JSONData)")
-                    let json = JSON(JSONData)
-                    print(json["args"]["key"])
+                    // loggers
+                   print("Success with JSON: \(JSONData)")
+                   
+                   // SwiftyJSON
+                   let json = JSON(JSONData)
+                   print(json["args"]["key"])
                    
                     // fail
                 case .Failure(let data, let error):
