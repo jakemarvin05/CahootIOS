@@ -26,13 +26,79 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var cahootLogoImageView: UIImageView!
+    
     var activityIndicator: UIActivityIndicatorView?
+    
+    @IBAction func loginButtonTouchUpInside(sender: UIButton) {
+        // console logger
+        print("Login Clicked")
+        // extract required field data
+        let email = self.emailField.text
+        let password =  self.passwordField.text
+        //
+        if(!email!.isEmpty && !password!.isEmpty){
+            // console logger
+            print("Fields are validated")
+            
+            if(self.isValidEmail(email!)){
+                // restyle the text field's border color to black
+                self.passwordField.layer.borderWidth = 1
+                self.passwordField.layer.borderColor = UIColor.blackColor().CGColor
+                self.emailField.layer.borderWidth = 1
+                self.emailField.layer.borderColor = UIColor.blackColor().CGColor
+                
+                // Authenticate by email
+                self.authenticateEmail(email!, password: password!)
+                
+            }
+            else{
+                // restyle the email field's border color to red
+                self.emailField.layer.borderWidth = 1
+                self.emailField.layer.borderColor = UIColor.redColor().CGColor
+                
+            }
+        }
+        else{
+            // Handle the passwordField
+            if(password!.isEmpty){
+                // restyle the password field's border color to red
+                self.passwordField.layer.borderWidth = 1
+                self.passwordField.layer.borderColor = UIColor.redColor().CGColor
+            }
+            else{
+                // restyle the password field's border color to red
+                self.passwordField.layer.borderWidth = 1
+                self.passwordField.layer.borderColor = UIColor.blackColor().CGColor
+            }
+            
+            // Handle the emailField
+            if(!email!.isEmpty && self.isValidEmail(email!)){
+                // restyle the email field's border color to black
+                self.emailField.layer.borderWidth = 1
+                self.emailField.layer.borderColor = UIColor.blackColor().CGColor
+            }
+            else{
+                // restyle the email field's border color to black
+                self.emailField.layer.borderWidth = 1
+                self.emailField.layer.borderColor = UIColor.redColor().CGColor
+            }
+            
+        }
+        
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         // Executes checking of authentication before loading the view
         
+        // hide the subviews
+        self.hideSubviews()
+        
         // show activity indicator
-        self.addActivityIndicator()
+        dispatch_async(dispatch_get_main_queue()){
+            self.addActivityIndicator()
+        }
         
         // Set up FB Button
         self.loginWithFBButton.readPermissions = ["public_profile", "email", "user_friends"]
@@ -46,14 +112,76 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.authenticateFBToken(fbtoken: token)
         }
         else{
+            // check if authenticated via email
+            let defaults = NSUserDefaults.standardUserDefaults()
+            
+            if let key1Value: Bool = defaults.boolForKey(UserDefaultsKeys.key1) {
+                if(key1Value) {
+                    // console logger
+                    print("User is already authenticated via email")
+                    
+                    // delay by 1 sec before executing to preserve aesthetic
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64( 1 * NSEC_PER_SEC)), dispatch_get_main_queue()) {
+                        // do commonLoginFunctions
+                        self.commonLoginFunctions()
+                    }
+                    
+                    
+                }
+                else{
+                    // hide activity indicator
+                    dispatch_async(dispatch_get_main_queue()){
+                        self.hideActivityIndicator()
+                    }
+                }
+            }
+            
             // hide activity indicator
-            self.hideActivityIndicator()
+            dispatch_async(dispatch_get_main_queue()){
+                self.hideActivityIndicator()
+            }
         }
     }
+    
+    
+    func hideSubviews(){
+        // set all elements appearance's visibility to hidden
+        self.cahootLogoImageView.layer.opacity = 0
+        self.emailField.layer.opacity = 0
+        self.passwordField.layer.opacity = 0
+        self.forgotPasswordButton.layer.opacity = 0
+        self.loginButton.layer.opacity = 0
+        self.loginWithFBButton.layer.opacity = 0
+        self.signUpButton.layer.opacity = 0
+    }
+    
+    
+    func showSubviews(){
+        // set all elements appearance's visibility to visible
+        self.cahootLogoImageView.layer.opacity = 1
+        self.emailField.layer.opacity = 1
+        self.passwordField.layer.opacity = 1
+        self.forgotPasswordButton.layer.opacity = 1
+        self.loginButton.layer.opacity = 1
+        self.loginWithFBButton.layer.opacity = 1
+        self.signUpButton.layer.opacity = 1
+    }
+    
+    
+    func isValidEmail(testStr:String) -> Bool {
+        // println("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
+    }
+    
     
     func authenticateFBToken( fbtoken token: String){
         // Extract user Data
         self.returnUserData();
+        
+        print(token)
         
         // print("Authenticating token with string value of: " + token)
         let url = APIDOMAIN + "/auth/facebook/ajax"
@@ -97,6 +225,55 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
                 }
         }
         
+        
+    }
+    
+    
+    func authenticateEmail(email: String, password: String){
+        // Show the activity indicator
+        self.addActivityIndicator()
+        
+        // print("Authenticating token with string value of: " + token)
+        let url = APIDOMAIN + "/auth/login"
+        
+        // send request to the API
+        Alamofire.request(.POST, url , parameters: ["email": email, "password": password])
+            .responseJSON { request, response, result in
+                switch result {
+                    // success
+                case .Success(let JSONData):
+                    // console logger
+                    print("Success with JSON: \(JSONData)")
+                    
+                    // SwiftyJSON
+                    let json = JSON(JSONData)
+                    
+                    if(json["success"]){
+                        // do commonLoginFunctions when success
+                        self.commonLoginFunctions()
+                    }
+                    
+                    // fail
+                case .Failure(let data, let error):
+                    // console logger
+                    print("Request failed with error: \(error)")
+                    
+                    // extract the localizedDescription
+                    let errorMessage: String = (error as NSError).localizedDescription
+                    
+                    // Alert the user about the error
+                    self.createAlert("Alert", message: "\(errorMessage)\n Please try again later.", handler: { (UIAlertAction) -> () in
+                        // console logger
+                        print("Okay was clicked")
+                        
+                        // hide activity indicator
+                        self.hideActivityIndicator()
+                    })
+                    if let data = data {
+                        print("Response data: \(NSString(data: data, encoding: NSUTF8StringEncoding)!)")
+                    }
+                }
+        }
         
     }
     
@@ -157,17 +334,30 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
+    
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         // console logger
         print("User Logged Out")
     }
     
+    
     func commonLoginFunctions(){
         // This is the function executed when the user is successfully authenticated
+        
+        // console logger
         print("executing common login functions...")
         
+        // show all subviews
+        self.showSubviews()
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(true, forKey: UserDefaultsKeys.key1)
+        defaults.synchronize()
+        
         // perform the view transition
-        performSegueWithIdentifier("show_tabbar_view", sender: self)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.performSegueWithIdentifier("show_tabbar_view", sender: self)
+        }
         
     }
     
@@ -258,6 +448,9 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
     /// Hiding Activity Indicator
     func hideActivityIndicator() {
         if self.activityIndicator != nil {
+            // show all subviews
+            self.showSubviews()
+            
             // remove activityIndicator if set
             self.activityIndicator?.removeFromSuperview()
             

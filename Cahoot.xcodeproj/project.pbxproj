@@ -21,6 +21,7 @@
 		953F35871CE389A3000357F9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953F35841CE389A3000357F9 /* FBSDKCoreKit.framework */; };
 		953F35881CE389A3000357F9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953F35851CE389A3000357F9 /* FBSDKLoginKit.framework */; };
 		953F358B1CE3961F000357F9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F358A1CE3961F000357F9 /* TabBarViewController.swift */; };
+		95E5E5A11CE4C10A00627CAB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E5E5A01CE4C10900627CAB /* UserDefaults.swift */; };
 		DB52722F1192EC5B2926431E /* Pods_CahootTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D779FB198BEBC0ABF4FB3331 /* Pods_CahootTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		953F35851CE389A3000357F9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		953F35891CE389C0000357F9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		953F358A1CE3961F000357F9 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		95E5E5A01CE4C10900627CAB /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		9B497A5150C8DCA0DDAAE512 /* Pods-CahootTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CahootTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CahootTests/Pods-CahootTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7A104F22EF34B22685F5ADD /* Pods_CahootUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CahootUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E94EEDDA62218C4D31F965 /* Pods-CahootUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CahootUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CahootUITests/Pods-CahootUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				953824B51CE2EF50006AB773 /* Info.plist */,
 				953824AD1CE2EF50006AB773 /* Cahoot.xcdatamodeld */,
 				953F358A1CE3961F000357F9 /* TabBarViewController.swift */,
+				95E5E5A01CE4C10900627CAB /* UserDefaults.swift */,
 			);
 			path = Cahoot;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				953F358B1CE3961F000357F9 /* TabBarViewController.swift in Sources */,
+				95E5E5A11CE4C10A00627CAB /* UserDefaults.swift in Sources */,
 				953824A91CE2EF50006AB773 /* IndexViewController.swift in Sources */,
 				953824A71CE2EF50006AB773 /* AppDelegate.swift in Sources */,
 				953824AF1CE2EF50006AB773 /* Cahoot.xcdatamodeld in Sources */,
