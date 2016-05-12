@@ -91,6 +91,7 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewWillAppear(animated: Bool) {
         // Executes checking of authentication before loading the view
+        print("view will appear...")
         
         // hide the subviews
         self.hideSubviews()
@@ -108,8 +109,14 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
             // User is already logged in, do work such as go to next view controller.
             let token = FBSDKAccessToken.currentAccessToken().tokenString
             
-            // Authenticate FBToken
-            self.authenticateFBToken(fbtoken: token)
+            let defaults = NSUserDefaults.standardUserDefaults()
+            // only execute fb authentication when user was fbauthenticated
+            if let key2Value: Bool = defaults.boolForKey(UserDefaultsKeys.key2) {
+                if(key2Value) {
+                    // Authenticate FBToken
+                    self.authenticateFBToken(fbtoken: token)
+                }
+            }
         }
         else{
             // check if authenticated via email
@@ -204,6 +211,14 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
                     let json = JSON(JSONData)
                     
                     if(json["success"]){
+                        // set UserDefault Values
+                        let defaults = NSUserDefaults.standardUserDefaults()
+                        // for fb authentication
+                        defaults.setBool(true, forKey: UserDefaultsKeys.key2)
+                        // for email authentication
+                        defaults.setBool(false, forKey: UserDefaultsKeys.key1)
+                        defaults.synchronize()
+                        
                         // do commonLoginFunctions when success
                         self.commonLoginFunctions()
                     }
@@ -254,6 +269,14 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
                     let json = JSON(JSONData)
                     
                     if(json["success"]){
+                        // set UserDefault Values
+                        let defaults = NSUserDefaults.standardUserDefaults()
+                        // for email authentication
+                        defaults.setBool(true, forKey: UserDefaultsKeys.key1)
+                        // for fb authentication
+                        defaults.setBool(false, forKey: UserDefaultsKeys.key2)
+                        defaults.synchronize()
+                        
                         // do commonLoginFunctions when success
                         self.commonLoginFunctions()
                     }
@@ -343,6 +366,11 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         // console logger
         print("User Logged Out")
+        
+        // set UserDefault Values for fb authentication
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(false, forKey: UserDefaultsKeys.key2)
+        defaults.synchronize()
     }
     
     
@@ -354,10 +382,6 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         // show all subviews
         self.showSubviews()
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setBool(false, forKey: UserDefaultsKeys.key1)
-        defaults.synchronize()
         
         // perform the view transition
         dispatch_async(dispatch_get_main_queue()) {

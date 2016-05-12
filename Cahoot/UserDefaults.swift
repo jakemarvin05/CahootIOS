@@ -10,4 +10,5 @@ import Foundation
 
 struct UserDefaultsKeys {
     static let key1: String = "isUserAuthenticated"
+    static let key2: String = "isUserFBAuthenticated"
 }
