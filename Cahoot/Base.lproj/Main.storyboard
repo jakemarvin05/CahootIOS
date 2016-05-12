@@ -109,12 +109,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="EmailField" destination="NN8-cL-Ik9" id="F1U-Vk-WUo"/>
-                        <outlet property="ForgotPasswordButton" destination="txd-t6-gcd" id="Jcv-Ku-HEV"/>
-                        <outlet property="LoginButton" destination="vbY-9z-VTI" id="XpD-sE-XmW"/>
-                        <outlet property="LoginWithFBButton" destination="5Ma-hL-Jfz" id="HIl-ce-mVh"/>
-                        <outlet property="PasswordField" destination="w85-kb-IGA" id="Kzr-a7-7YC"/>
-                        <outlet property="SignUpButton" destination="qQ2-Sm-yv4" id="1EP-XP-bey"/>
+                        <outlet property="emailField" destination="NN8-cL-Ik9" id="nut-Rj-Djm"/>
+                        <outlet property="forgotPasswordButton" destination="txd-t6-gcd" id="ehB-aA-YNR"/>
+                        <outlet property="loginButton" destination="vbY-9z-VTI" id="jId-Sk-d4H"/>
+                        <outlet property="loginWithFBButton" destination="5Ma-hL-Jfz" id="iEQ-dD-nHe"/>
+                        <outlet property="passwordField" destination="w85-kb-IGA" id="Pv6-je-8dk"/>
+                        <outlet property="signUpButton" destination="qQ2-Sm-yv4" id="TNk-Ew-H7K"/>
                         <segue destination="Y9g-ka-uVE" kind="show" identifier="show_tabbar_view" id="Zde-wt-Rj4"/>
                     </connections>
                 </viewController>
