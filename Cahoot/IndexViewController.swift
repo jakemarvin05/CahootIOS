@@ -120,6 +120,11 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
                     // console logger
                     print("User is already authenticated via email")
                     
+                    // Show activity indicator
+                    dispatch_async(dispatch_get_main_queue()){
+                        self.addActivityIndicator()
+                    }
+                    
                     // delay by 1 sec before executing to preserve aesthetic
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64( 1 * NSEC_PER_SEC)), dispatch_get_main_queue()) {
                         // do commonLoginFunctions
@@ -351,7 +356,7 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.showSubviews()
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setBool(true, forKey: UserDefaultsKeys.key1)
+        defaults.setBool(false, forKey: UserDefaultsKeys.key1)
         defaults.synchronize()
         
         // perform the view transition

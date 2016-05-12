@@ -157,15 +157,12 @@
 		953824A51CE2EF50006AB773 /* Cahoot */ = {
 			isa = PBXGroup;
 			children = (
-				953824A61CE2EF50006AB773 /* AppDelegate.swift */,
-				953824A81CE2EF50006AB773 /* IndexViewController.swift */,
-				953824AA1CE2EF50006AB773 /* Main.storyboard */,
+				95E5E5A41CE4E0B600627CAB /* Tabbar */,
+				95E5E5A31CE4E0A900627CAB /* Index */,
+				95E5E5A21CE4E08400627CAB /* Main */,
 				953824B01CE2EF50006AB773 /* Assets.xcassets */,
-				953824B21CE2EF50006AB773 /* LaunchScreen.storyboard */,
 				953824B51CE2EF50006AB773 /* Info.plist */,
 				953824AD1CE2EF50006AB773 /* Cahoot.xcdatamodeld */,
-				953F358A1CE3961F000357F9 /* TabBarViewController.swift */,
-				95E5E5A01CE4C10900627CAB /* UserDefaults.swift */,
 			);
 			path = Cahoot;
 			sourceTree = "<group>";
@@ -186,6 +183,33 @@
 				953824CB1CE2EF51006AB773 /* Info.plist */,
 			);
 			path = CahootUITests;
+			sourceTree = "<group>";
+		};
+		95E5E5A21CE4E08400627CAB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				953824A61CE2EF50006AB773 /* AppDelegate.swift */,
+				953824AA1CE2EF50006AB773 /* Main.storyboard */,
+				953824B21CE2EF50006AB773 /* LaunchScreen.storyboard */,
+				95E5E5A01CE4C10900627CAB /* UserDefaults.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		95E5E5A31CE4E0A900627CAB /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				953824A81CE2EF50006AB773 /* IndexViewController.swift */,
+			);
+			name = Index;
+			sourceTree = "<group>";
+		};
+		95E5E5A41CE4E0B600627CAB /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				953F358A1CE3961F000357F9 /* TabBarViewController.swift */,
+			);
+			name = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
