@@ -106,6 +106,7 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.loginWithFBButton.delegate = self
         
         if (FBSDKAccessToken.currentAccessToken() != nil){
+            
             // User is already logged in, do work such as go to next view controller.
             let token = FBSDKAccessToken.currentAccessToken().tokenString
             
@@ -115,6 +116,19 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
                 if(key2Value) {
                     // Authenticate FBToken
                     self.authenticateFBToken(fbtoken: token)
+                }
+                else{
+                    // hide activity indicator
+                    dispatch_async(dispatch_get_main_queue()){
+                        self.hideActivityIndicator()
+                    }
+                
+                }
+            }
+            else{
+                // hide activity indicator
+                dispatch_async(dispatch_get_main_queue()){
+                    self.hideActivityIndicator()
                 }
             }
         }
@@ -324,6 +338,11 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         // console logger
         print("User Logged In")
+        
+        // show activity indicator
+        dispatch_async(dispatch_get_main_queue()){
+            self.addActivityIndicator()
+        }
         
         if ((error) != nil){
             // Process error

@@ -10,7 +10,14 @@ import UIKit
 import CoreData
 
 // Set Constant Variables here
+// API Domain
 let APIDOMAIN: String = "http://localhost:2999"
+
+// Set Constant Colors
+// cahoot red
+let PRIMARYCOLOR: UIColor = UIColor(red: 219/255, green: 33/255, blue: 41/255, alpha: 1)
+// cahoot green
+let SECONDARYCOLOR: UIColor =  UIColor(red: 41/255, green: 162/255, blue: 22/255, alpha: 1)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

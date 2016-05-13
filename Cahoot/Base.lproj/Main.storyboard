@@ -50,7 +50,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="LOG IN">
-                                    <color key="titleColor" red="0.98431372549019602" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.85882352939999995" green="0.12941176469999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qfk-XV-qMg"/>
@@ -126,7 +126,64 @@
             </objects>
             <point key="canvasLocation" x="245" y="318"/>
         </scene>
-        <!--Item 2-->
+        <!--inbox-->
+        <scene sceneID="Z8L-GK-Ukt">
+            <objects>
+                <viewController id="tbx-PB-44m" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8k-aq-skN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dpa-kP-OF5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qu1-Rx-vfP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="inbox" image="inboxButton" id="zKh-SR-I0b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nig-I7-JgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="2029"/>
+        </scene>
+        <!--post-->
+        <scene sceneID="h1f-UJ-ZHt">
+            <objects>
+                <viewController id="vei-gu-ORp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ht9-eM-TIC"/>
+                        <viewControllerLayoutGuide type="bottom" id="xuG-1x-JCx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="082-BZ-tBq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="post" image="postRequestButton" id="pPX-5i-qY3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdE-aY-sNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="1233"/>
+        </scene>
+        <!--profile-->
+        <scene sceneID="N5n-1g-BMC">
+            <objects>
+                <viewController id="kt5-2G-PNc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BIq-En-DyQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVl-oJ-rrK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Vz-Ny-Lav">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="profile" image="profileButton" id="CcM-SC-X9A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCq-sk-i3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="2757"/>
+        </scene>
+        <!--activities-->
         <scene sceneID="6Ou-jy-4WP">
             <objects>
                 <viewController id="cLH-z2-tdg" sceneMemberID="viewController">
@@ -139,13 +196,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="MWF-bA-UUt"/>
+                    <tabBarItem key="tabBarItem" title="activities" image="activitiesButton" id="FLp-jx-FSR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHe-uJ-2Sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2471" y="663"/>
+            <point key="canvasLocation" x="1791" y="351"/>
         </scene>
-        <!--Item 1-->
+        <!--explore-->
         <scene sceneID="TsU-Vi-78H">
             <objects>
                 <viewController id="4MJ-ia-yIu" sceneMemberID="viewController">
@@ -158,11 +215,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="XPP-Vh-I7u"/>
+                    <tabBarItem key="tabBarItem" title="explore" image="exploreButton" id="pwT-w7-zGL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7d5-lq-mCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2471" y="2"/>
+            <point key="canvasLocation" x="1783" y="-518"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="dbB-qe-OHd">
@@ -176,6 +233,9 @@
                     <connections>
                         <segue destination="4MJ-ia-yIu" kind="relationship" relationship="viewControllers" id="Ei5-Ne-4lG"/>
                         <segue destination="cLH-z2-tdg" kind="relationship" relationship="viewControllers" id="4Aa-gB-qwg"/>
+                        <segue destination="vei-gu-ORp" kind="relationship" relationship="viewControllers" id="wzU-uD-z6m"/>
+                        <segue destination="tbx-PB-44m" kind="relationship" relationship="viewControllers" id="t1b-2J-DmV"/>
+                        <segue destination="kt5-2G-PNc" kind="relationship" relationship="viewControllers" id="0wT-Xy-lQX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7BD-Hx-PKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,6 +244,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="activitiesButton" width="27" height="32"/>
         <image name="cahootLogo" width="694" height="270"/>
+        <image name="exploreButton" width="30" height="30"/>
+        <image name="inboxButton" width="30" height="20"/>
+        <image name="postRequestButton" width="30" height="29"/>
+        <image name="profileButton" width="26" height="30"/>
     </resources>
 </document>
