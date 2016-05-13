@@ -2,13 +2,13 @@
 //  TabBarViewController.swift
 //  Cahoot
 //
-//  Created by Techtics Ninja on 5/12/16.
+//  Created by Techtics Ninja on 5/13/16.
 //  Copyright © 2016 Cahoot. All rights reserved.
 //
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
