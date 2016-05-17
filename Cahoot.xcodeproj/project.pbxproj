@@ -22,6 +22,7 @@
 		953F35881CE389A3000357F9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953F35851CE389A3000357F9 /* FBSDKLoginKit.framework */; };
 		95E5E5A11CE4C10A00627CAB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E5E5A01CE4C10900627CAB /* UserDefaults.swift */; };
 		95E5E5A81CE5964C00627CAB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E5E5A71CE5964C00627CAB /* TabBarViewController.swift */; };
+		95FDEAA71CEB4CA000BC05BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FDEAA61CEB4CA000BC05BC /* SignUpViewController.swift */; };
 		DB52722F1192EC5B2926431E /* Pods_CahootTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D779FB198BEBC0ABF4FB3331 /* Pods_CahootTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		953F35891CE389C0000357F9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		95E5E5A01CE4C10900627CAB /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		95E5E5A71CE5964C00627CAB /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		95FDEAA61CEB4CA000BC05BC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9B497A5150C8DCA0DDAAE512 /* Pods-CahootTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CahootTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CahootTests/Pods-CahootTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7A104F22EF34B22685F5ADD /* Pods_CahootUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CahootUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E94EEDDA62218C4D31F965 /* Pods-CahootUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CahootUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CahootUITests/Pods-CahootUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		953824A51CE2EF50006AB773 /* Cahoot */ = {
 			isa = PBXGroup;
 			children = (
+				95FDEAA51CEB4C7700BC05BC /* SignUp */,
 				95E5E5A41CE4E0B600627CAB /* TabBar */,
 				95E5E5A31CE4E0A900627CAB /* Index */,
 				95E5E5A21CE4E08400627CAB /* Main */,
@@ -210,6 +213,14 @@
 				95E5E5A71CE5964C00627CAB /* TabBarViewController.swift */,
 			);
 			name = TabBar;
+			sourceTree = "<group>";
+		};
+		95FDEAA51CEB4C7700BC05BC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				95FDEAA61CEB4CA000BC05BC /* SignUpViewController.swift */,
+			);
+			name = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,12 @@
 				TargetAttributes = {
 					953824A21CE2EF50006AB773 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = H65PAF9BU7;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					953824B91CE2EF51006AB773 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -474,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FDEAA71CEB4CA000BC05BC /* SignUpViewController.swift in Sources */,
 				95E5E5A11CE4C10A00627CAB /* UserDefaults.swift in Sources */,
 				953824A91CE2EF50006AB773 /* IndexViewController.swift in Sources */,
 				953824A71CE2EF50006AB773 /* AppDelegate.swift in Sources */,
@@ -619,6 +637,8 @@
 			baseConfigurationReference = C51359126ED9F2EFA0E851C6 /* Pods-Cahoot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -627,6 +647,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Debug;
@@ -636,6 +657,8 @@
 			baseConfigurationReference = 52533AD9C44266984059D91A /* Pods-Cahoot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -644,6 +667,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thiscahoot.cahoot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Release;

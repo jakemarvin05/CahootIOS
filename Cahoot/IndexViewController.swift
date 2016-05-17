@@ -91,6 +91,15 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewWillAppear(animated: Bool) {
         // Executes checking of authentication before loading the view
+        
+        // Hide the navigation bar
+        self.navigationController?.navigationBarHidden = true
+        // Style the navigation bar 
+        // Change the back button color
+        self.navigationController?.navigationBar.tintColor = PRIMARYCOLOR
+        // Change the navigation title color
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: PRIMARYCOLOR]
+        
         print("view will appear...")
         
         // hide the subviews
@@ -511,6 +520,11 @@ class IndexViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        // show back the navigation bar
+        self.navigationController?.navigationBarHidden = false
     }
     
     
